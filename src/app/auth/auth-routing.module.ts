@@ -3,11 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 
+import { GuestGuard } from '../services/guards/guest.guard';
+
 
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [GuestGuard]
   }
 ];
 

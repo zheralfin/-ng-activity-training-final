@@ -3,8 +3,10 @@
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" routerLink="/">Home</a>
     <a class="p-2 text-dark" routerLink="/gallery">Gallery</a>
+    <a class="p-2 text-dark" routerLink="/users">Users</a>
     <a class="p-2 text-dark" routerLink="/pricing">Pricing</a>
     <a class="p-2 text-dark" routerLink="/contact">Contact</a>
   </nav>
-  <a class="btn btn-outline-primary" routerLink="/auth/login" >Sign In</a>
+  <a *ngIf="!isLoggedIn" class="btn btn-outline-primary" routerLink="/auth/login" >Sign In</a>
+  <a *ngIf="isLoggedIn" class="btn btn-outline-primary" (click)="onLogout()" >Sign Out</a>
 </header>

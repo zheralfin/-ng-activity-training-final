@@ -8,6 +8,8 @@ import { PricingComponent } from './pricing/pricing.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 import { CarouselComponent } from './home/carousel/carousel.component';
+import { UsersComponent } from './users/users.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { CarouselComponent } from './home/carousel/carousel.component';
     ContactComponent,
     PricingComponent,
     GalleryComponent,
-    CarouselComponent
+    CarouselComponent,
+    UsersComponent,
+    ProfileComponent
   ]
 })
 export class PagesModule { }
